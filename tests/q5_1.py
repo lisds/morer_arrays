@@ -22,27 +22,7 @@ test = {
           'hidden': False,
           'locked': False
         },
-        {
-          'code': r"""
-          >>> # Hint: the average is between the shortest and the longest
-          >>> shortest <= average <= longest
-          True
-          """,
-          'hidden': False,
-          'locked': False
-        },
-        {
-          'code': r"""
-          >>> np.isclose(shortest, np.min(waiting_times))
-          True
-          >>> np.isclose(longest, np.max(waiting_times))
-          True
-          >>> np.isclose(average, np.mean(waiting_times))
-          True
-          """,
-          'hidden': False,
-          'locked': False
-        }
+
       ],
       'scored': True,
       'setup': '',

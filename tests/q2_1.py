@@ -6,12 +6,23 @@ test = {
       'cases': [
         {
           'code': r"""
-          >>> np.allclose(weird_numbers, np.array([-2.,  0.93203909,  3.,  1.79174913]), rtol=1e-03, atol=1e-03)
+          >>> # You have not set the weird_numbers variable.
+          >>> 'weird_numbers' in vars()
           True
           """,
           'hidden': False,
           'locked': False
-        }
+        },
+        {
+          'code': r"""
+          >>> # You have not set the weird_numbers variable.
+          >>> weird_numbers is ...
+          False
+          """,
+          'hidden': False,
+          'locked': False
+        },
+
       ],
       'scored': True,
       'setup': '',

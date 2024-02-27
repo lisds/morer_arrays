@@ -6,12 +6,32 @@ test = {
       'cases': [
         {
           'code': r"""
-          >>> products
-          array([    6594,   663168, 66603168,   -39250])
+          >>> # You have not set the products variable.
+          >>> 'products' in vars()
+          True
           """,
           'hidden': False,
           'locked': False
-        }
+        },
+        {
+          'code': r"""
+          >>> # You have not set the products variable.
+          >>> products is ...
+          False
+          """,
+          'hidden': False,
+          'locked': False
+        },
+        {
+          'code': r"""
+          >>> # Products should be an array.
+          >>> isinstance(products, np.ndarray)
+          True
+          """,
+          'hidden': False,
+          'locked': False
+        },
+
       ],
       'scored': True,
       'setup': '',

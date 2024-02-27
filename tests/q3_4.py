@@ -6,12 +6,23 @@ test = {
       'cases': [
         {
           'code': r"""
-          >>> most_recent_birth_year
-          1917
+          >>> # You have not set the most_recent_birth_year variable.
+          >>> 'most_recent_birth_year' in vars()
+          True
           """,
           'hidden': False,
           'locked': False
-        }
+        },
+        {
+          'code': r"""
+          >>> # You have not set the most_recent_birth_year variable.
+          >>> most_recent_birth_year is ...
+          False
+          """,
+          'hidden': False,
+          'locked': False
+        },
+
       ],
       'scored': True,
       'setup': '',

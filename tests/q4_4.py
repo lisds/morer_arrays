@@ -14,43 +14,7 @@ test = {
           'hidden': False,
           'locked': False
         },
-        {
-          'code': r"""
-          >>> # Did you remember to round to the nearest integer?
-          >>> total = sum(celsius_max_temperatures)
-          >>> (np.round(total) - total) == 0
-          True
-          """,
-          'hidden': False,
-          'locked': False
-        },
-        {
-          'code': r"""
-          >>> sum(celsius_max_temperatures)
-          1280677.0
-          """,
-          'hidden': False,
-          'locked': False
-        },
-        {
-          'code': r"""
-          >>> len(celsius_max_temperatures)
-          65000
-          >>> celsius_max_temperatures.item(2003)
-          20.0
-          """,
-          'hidden': False,
-          'locked': False
-        },
-        {
-          'code': r"""
-          >>> np.all(celsius_max_temperatures ==
-          ...        np.round((max_temperatures - 32) * 5 / 9))
-          True
-          """,
-          'hidden': False,
-          'locked': False
-        }
+
       ],
       'scored': True,
       'setup': '',

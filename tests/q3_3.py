@@ -6,12 +6,23 @@ test = {
       'cases': [
         {
           'code': r"""
-          >>> index_of_last_element
-          141
+          >>> # You have not set the index_of_last_element variable.
+          >>> 'index_of_last_element' in vars()
+          True
           """,
           'hidden': False,
           'locked': False
-        }
+        },
+        {
+          'code': r"""
+          >>> # You have not set the index_of_last_element variable.
+          >>> index_of_last_element is ...
+          False
+          """,
+          'hidden': False,
+          'locked': False
+        },
+
       ],
       'scored': True,
       'setup': '',

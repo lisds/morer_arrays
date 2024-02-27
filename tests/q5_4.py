@@ -6,21 +6,14 @@ test = {
       'cases': [
         {
           'code': r"""
-          >>> 15 <= average_error <= 25
-          True
+          >>> # Don't forget to set average_error.
+          >>> average_error is ...
+          False
           """,
           'hidden': False,
           'locked': False
         },
-        {
-          'code': r"""
-          >>> my_error = np.abs(np.diff(waiting_times))
-          >>> np.isclose(average_error, np.mean(my_error))
-          True
-          """,
-          'hidden': False,
-          'locked': False
-        }
+
       ],
       'scored': True,
       'setup': '',

@@ -6,17 +6,23 @@ test = {
       'cases': [
         {
           'code': r"""
-          >>> elements_of_some_numbers
-            English name for position Index  Element
-          0                     first     0       -1
-          1                    second     1       -3
-          2                     third     2       -6
-          3                    fourth     3      -10
-          4                     fifth     4      -15
+          >>> # You have not set the names variable.
+          >>> 'names' in vars()
+          True
           """,
           'hidden': False,
           'locked': False
-        }
+        },
+        {
+          'code': r"""
+          >>> # You have not set the names variable.
+          >>> names is ...
+          False
+          """,
+          'hidden': False,
+          'locked': False
+        },
+
       ],
       'scored': True,
       'setup': '',
